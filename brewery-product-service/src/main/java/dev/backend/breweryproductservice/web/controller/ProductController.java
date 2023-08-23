@@ -15,7 +15,7 @@ public class ProductController {
     @GetMapping("/{productId}")
     public ResponseEntity<ProductDto> getProductById(@PathVariable("productId") UUID productId) {
 
-        return new ResponseEntity<>(ProductDto.builder ().build(), HttpStatus.OK);
+        return new ResponseEntity<>(ProductDto.builder().build(), HttpStatus.OK);
     }
     @PostMapping
     public ResponseEntity saveNewProduct (@RequestBody ProductDto productDto) {
